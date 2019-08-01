@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <title>俄罗斯方块</title>
+    <style>
+        .game{width: 200px;height: 400px;background: #F2FAFF;border:1px solid blue;position: absolute;left: 10px;top: 10px;}
+        .game>div{z-index: 1000;}
+        .next{width: 80px;height: 80px;background: #F2FAFF;border:1px solid blue;position: absolute;left: 250px;top: 10px;}
+        .info{position: absolute;left: 250px;top:100px;}
+        .none,.down,.current{width: 20px;height: 20px;position: absolute;box-sizing: border-box;}
+        .none{background-color: #F2FAFF;}
+        .current{background-color: pink;border: 1px solid red;}
+        .down{background-color: gray;border: 1px solid black;}
+        .control_down,.control_left,.control_right,.control_up{width: 50px;height: 50px;background: #003eff}
+        .control_up{position: absolute;top:450px;left: 100px;}
+        .control_down{position: absolute;top: 550px;left: 100px;}
+        .control_left{position: absolute;top: 500px;left: 50px;}
+        .control_right{position: absolute;top: 500px;left: 150px;}
+    </style>
+</head>
+<body>
+<div id="game" class="game"></div>
+<div id="next" class="next"></div>
+<div id="info" class="info">
+    <div>已用时：<span class="used-time">0</span>s</div>
+    <div>已得分：<span class="score">0</span>分</div>
+</div>
+<div class="control">
+    <div class="control_left"></div>
+    <div class="control_right"></div>
+    <div class="control_up"></div>
+    <div class="control_down"></div>
+</div>
+
+</body>
+<script src="jQuery/jquery-3.2.1.min.js"></script>
+<script src="square.js"></script>
+<script src="square_1.js"></script>
+<script src="square_2.js"></script>
+<script src="square_3.js"></script>
+<script src="square_4.js"></script>
+<script src="square_5.js"></script>
+<script src="square_6.js"></script>
+<script src="square_7.js"></script>
+<script src="Game_main.js"></script>
+<script src="start.js"></script>
+<script>
+    var Game_Start = new GameStart();
+    Game_Start.start();
+</script>
+</html>
